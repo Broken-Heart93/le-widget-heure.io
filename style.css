@@ -70,5 +70,5 @@ button.change-style {
     cursor: pointer;
     color: red; /* Bouton rouge */
     position: relative;
-    left: -20px; /* Position à gauche du soleil */
+    margin-right: 10px; /* Décalé à gauche du soleil */
 }
