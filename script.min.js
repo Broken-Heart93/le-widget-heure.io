@@ -1,21 +1,42 @@
-const timeElement = document.getElementById('time');
-const styles = [
-    'style-1', 'style-2', 'style-3', 'style-4', 'style-5',
-    'style-6', 'style-7', 'style-8', 'style-9', 'style-10'
-];
-let currentStyleIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    const timeElement = document.getElementById("time");
+    const dateElement = document.getElementById("date");
+    const toggleThemeButton = document.getElementById("toggle-theme");
+    const changeStyleButton = document.getElementById("change-style");
 
-// Changer de style
-document.getElementById('change-style').addEventListener('click', () => {
-    timeElement.classList.remove(styles[currentStyleIndex]);
-    currentStyleIndex = (currentStyleIndex + 1) % styles.length;
-    timeElement.classList.add(styles[currentStyleIndex]);
-});
+    let currentStyleIndex = 0;
+    const styles = [
+        "style-1", "style-2", "style-3", "style-4", "style-5",
+        "style-6", "style-7", "style-8", "style-9", "style-10"
+    ];
 
-// Basculer le thème
-document.getElementById('toggle-theme').addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    document.querySelector('.widget').classList.toggle('dark-theme');
-    timeElement.classList.toggle('dark-theme');
-    document.getElementById('date').classList.toggle('dark-theme');
+    // Fonction pour mettre à jour l'heure et la date
+    function updateTime() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString("fr-FR", { hour12: false });
+        const dateString = now.toLocaleDateString("fr-FR");
+
+        timeElement.textContent = timeString;
+        dateElement.textContent = dateString;
+    }
+
+    // Changer de style pour l'heure
+    changeStyleButton.addEventListener("click", () => {
+        timeElement.classList.remove(styles[currentStyleIndex]);
+        currentStyleIndex = (currentStyleIndex + 1) % styles.length;
+        timeElement.classList.add(styles[currentStyleIndex]);
+    });
+
+    // Basculer entre thème clair et sombre
+    toggleThemeButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme");
+        const icon = toggleThemeButton.textContent === "🌞" ? "🌙" : "🌞";
+        toggleThemeButton.textContent = icon;
+    });
+
+    // Mettre à jour l'heure chaque seconde
+    setInterval(updateTime, 1000);
+
+    // Mise à jour initiale
+    updateTime();
 });
