@@ -68,4 +68,5 @@ body.dark-theme {
 button.change-style {
     font-size: 1.8rem;
     cursor: pointer;
+    color: red; /* Bouton rouge */
 }
