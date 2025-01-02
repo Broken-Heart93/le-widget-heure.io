@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #fff;
+    background-color: #ffffff; /* Fond blanc pour le mode jour */
 }
 
 .widget {
@@ -14,17 +14,19 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #373737;
+    background-color: #f0f0f0; /* Fond clair pour la boîte */
 }
 
 .time {
     font-size: 2.5rem;
     margin: 10px 0;
+    color: #000; /* Texte noir */
 }
 
 .date {
     font-size: 1.2rem;
     margin: 10px 0;
+    color: #000; /* Texte noir */
 }
 
 button.toggle-theme {
@@ -34,14 +36,16 @@ button.toggle-theme {
     cursor: pointer;
 }
 
+/* Thème sombre */
 body.dark-theme {
-    background-color: #333;
+    background-color: #191919; /* Fond sombre */
 }
 
 .widget.dark-theme {
-    background-color: #444;
+    background-color: #444; /* Fond plus foncé pour la boîte */
 }
 
-.time.dark-theme, .date.dark-theme {
-    color: white;
+.time.dark-theme, 
+.date.dark-theme {
+    color: white; /* Texte blanc */
 }
