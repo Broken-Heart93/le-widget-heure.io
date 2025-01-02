@@ -64,18 +64,34 @@ body.dark-theme {
 .time.style-9 { font-family: 'Comic Sans MS', cursive, sans-serif; }
 .time.style-10 { font-family: 'Trebuchet MS', Helvetica, sans-serif; }
 
+/* Bouton en forme de flèche pour changer le style */
 button.change-style {
     background: none;
     border: none;
     font-size: 1.8rem; /* Taille pour Unicode */
     cursor: pointer;
-    color: red; /* Couleur rouge */
-    position: relative;
-    margin-right: 10px; /* Espace avant le soleil */
+    color: red; /* Bouton rouge */
+    position: absolute;
+    left: -40px; /* Position à gauche du soleil */
 }
 
-/* Pour SVG */
+/* Bouton flèche utilisant SVG */
 button.change-style svg {
-    fill: red; /* Remplissage rouge */
+    fill: red; /* Couleur rouge */
+    width: 24px; /* Largeur */
+    height: 24px; /* Hauteur */
     cursor: pointer;
+}
+
+/* Positionner les icônes côte à côte */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacement entre les icônes */
 }
