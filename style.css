@@ -63,3 +63,9 @@ body.dark-theme {
 .time.style-8 { font-family: 'Arial Black', Gadget, sans-serif; }
 .time.style-9 { font-family: 'Comic Sans MS', cursive, sans-serif; }
 .time.style-10 { font-family: 'Trebuchet MS', Helvetica, sans-serif; }
+
+/* Bouton en forme de flèche pour changer le style */
+button.change-style {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
