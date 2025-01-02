@@ -1,13 +1,6 @@
 {
-    "name": "mon-widget",
-    "version": "1.0.0",
-    "description": "Un widget pour Notion",
-    "main": "index.html",
-    "scripts": {
-      "minify": "terser script.js --compress --mangle --output script.min.js"
-    },
-    "devDependencies": {
-      "terser": "^5.0.0"
-    }
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'No build step required'"
   }
-  
+}
