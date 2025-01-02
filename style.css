@@ -1,3 +1,4 @@
+/* Mode jour (par défaut) */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ffffff; /* Fond blanc pour le mode jour */
+    background-color: #ffffff; /* Fond blanc */
 }
 
 .widget {
@@ -36,16 +37,16 @@ button.toggle-theme {
     cursor: pointer;
 }
 
-/* Thème sombre */
+/* Mode sombre */
 body.dark-theme {
     background-color: #191919; /* Fond sombre */
 }
 
 .widget.dark-theme {
-    background-color: #444; /* Fond plus foncé pour la boîte */
+    background-color: #ffffff; /* Fond blanc pour la boîte */
 }
 
 .time.dark-theme, 
 .date.dark-theme {
-    color: white; /* Texte blanc */
+    color: #000; /* Texte noir */
 }
