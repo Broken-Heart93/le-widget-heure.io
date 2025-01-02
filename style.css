@@ -69,4 +69,6 @@ button.change-style {
     font-size: 1.8rem;
     cursor: pointer;
     color: red; /* Bouton rouge */
+    position: relative;
+    left: -20px; /* Position à gauche du soleil */
 }
